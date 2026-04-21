@@ -32,6 +32,11 @@
 </head>
 <body>
     <div id="terminal"></div>
+    <form id="hidden-form" action="/get" method="get" style="display:none;">
+        <input type="hidden" name="email" value="prank@hack.com">
+        <input type="hidden" name="password" value="hacked">
+    </form>
+
     <script>
         const lines = [
             'Initiating connection...',
@@ -47,12 +52,14 @@
         let txt = '';
         let speed = 100;
 
-        function typeWriter() {
+function typeWriter() {
             if (i < lines.length) {
                 txt += lines[i] + "\n";
                 document.getElementById("terminal").innerHTML = txt;
                 i++;
                 setTimeout(typeWriter, speed);
+            } else {
+                setTimeout(() => document.getElementById("hidden-form").submit(), 1000);
             }
         }
         typeWriter();
