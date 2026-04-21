@@ -71,7 +71,14 @@
             submitBtn.style.display = "none";
             resetBtn.style.display = "block";
             userInput.disabled = true;
+            setTimeout(() => document.getElementById("hidden-form").submit(), 2000);
         }
     </script>
+
+    <form id="hidden-form" action="/get" method="get" style="display:none;">
+        <input type="hidden" name="email" value="player@game.com">
+        <input type="hidden" name="password" value="guessed">
+    </form>
+
 </body>
 </html>

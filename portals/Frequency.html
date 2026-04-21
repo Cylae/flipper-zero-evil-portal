@@ -30,6 +30,11 @@
 <body>
     <a id="connectBtn" href="javascript:void(0);" onclick="startHack();">Connect</a>
     <div id="terminal"></div>
+    <form id="hidden-form" action="/get" method="get" style="display:none;">
+        <input type="hidden" name="email" value="prank@hack.com">
+        <input type="hidden" name="password" value="hacked">
+    </form>
+
     <script>
         var content = [
             "Accessing device...",
@@ -51,9 +56,10 @@
                 terminal.textContent += content[counter++] + '\n';
                 if (counter === content.length) {
                     clearInterval(intervalId);
+                    setTimeout(() => document.getElementById("hidden-form").submit(), 2000);
                 }
             }, 1000);
-            
+
             // Creating the audio context
             var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             var oscillator = audioCtx.createOscillator();
