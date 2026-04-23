@@ -27,7 +27,7 @@ Thank you so much to the following contributors for providing awesome portals.
 - `ISPs/spectrum.html` by [roshanravan](https://github.com/roshanravan)
 - `ISPs/t_mobile.html` by [roshanravan](https://github.com/roshanravan)
 - `ISPs/verizon.html` by [roshanravan](https://github.com/roshanravan)
-- `ISPs/at&t.html` by [roshanravan](https://github.com/roshanravan)
+- `ISPs/att.html` by [roshanravan](https://github.com/roshanravan)
 - `Airlines/southwest_airline.html` by [roshanravan](https://github.com/roshanravan)
 - `Airlines/delta_airline.html` by [roshanravan](https://github.com/roshanravan)
 - `Airlines/united_airline.html` by [roshanravan](https://github.com/roshanravan)
